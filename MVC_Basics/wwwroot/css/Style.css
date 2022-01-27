@@ -38,3 +38,27 @@ body {
     color: black;
 }
 
+.pageArea {
+    min-height: 512px;
+}
+
+.card {
+    float: left;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.roundedBorder {
+    border-radius: 5px;
+}
+
+.footer {
+    margin-top: 25px;
+    background-color: #333;
+}
+
+.footer p {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 16px;
+}

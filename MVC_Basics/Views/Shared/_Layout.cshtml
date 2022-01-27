@@ -4,11 +4,11 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>@ViewBag.Title</title>
-        <link rel="stylesheet" href="~\Style.css" />
+        <link rel="stylesheet" href="~/css/Style.css" />
     </head>
     <body>
-        <div class="navbar">
-            <header>
+        <header>
+            <div class="navbar">
                 <div>
                     <h1>Logo</h1>
                 </div>
@@ -20,13 +20,15 @@
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                     </ul>
                 </div>
-            </header>
-        </div>
-        <div>
+            </div>
+        </header>
+        <div class="pageArea">
             @RenderBody()
         </div>
-        <footer>
-            <a>@DateTime.Now.Year Samuel Schön</a>
-        </footer>
+        <div class="footer">
+            <footer>
+                <p> &copy; @DateTime.Now.Year Samuel Schön</p>
+            </footer>
+        </div>
     </body>
 </html>
