@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC_Basics.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace MVC_Basics.Controlles
         [HttpPost]
         public IActionResult FeverCheck(int inputTemp)
         {
-            ViewBag.Message = inputTemp;
+            ViewBag.Message = FeverChecker.Check(inputTemp);
             return View();
         }
 

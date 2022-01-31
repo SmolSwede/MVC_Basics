@@ -3,7 +3,7 @@
 *@
 
 @{
-    ViewData["Title"] = "Doctor";
+    ViewData["Title"] = "CheckFever";
 }
 
 <h1 class="card roundedBorder">Fever Checker</h1>
@@ -15,7 +15,7 @@
         <p>@ViewBag.Message</p>
         }
     </div>
-    <form asp-controller="Docktor" asp-action="CheckFever" method="post">
+    <form asp-controller="Doctor" asp-action="FeverCheck" method="post">
         <label>You'r tempreture</label>
         <input type="number" name="inputTemp"/>
         <input type="submit" name="check"/>
