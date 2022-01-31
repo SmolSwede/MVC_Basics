@@ -7,29 +7,32 @@
         <link rel="stylesheet" href="~/css/Style.css" />
     </head>
     <body>
-        <header>
-            <div class="navbar">
-                <div>
-                    <h1>Logo</h1>
+        <div id="page-container">
+            <header>
+                <div class="navbar">
+                    <div>
+                        <h1>Logo</h1>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Prodjects", "Prodjects", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Guessing Game", "GuessingGame", "Home")</li>
+                            <li>@Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Prodjects", "Prodjects", "Home")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Fever Check", "FeverCheck", "Doctor")</li>
-                    </ul>
-                </div>
+            </header>
+            <div class="pageArea">
+                @RenderBody()
             </div>
-        </header>
-        <div class="pageArea">
-            @RenderBody()
-        </div>
-        <div class="footer">
-            <footer>
-                <p> &copy; @DateTime.Now.Year Samuel Schön</p>
-            </footer>
+            <div id="footer">
+                <footer>
+                    <p> &copy; @DateTime.Now.Year Samuel Schön</p>
+                </footer>
+            </div>
         </div>
     </body>
 </html>
